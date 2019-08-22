@@ -1,4 +1,4 @@
-package com.nju.edu.seckill.bean;
+package com.nju.edu.seckill.common;
 
 /**
  * Exposer
@@ -36,12 +36,26 @@ public class Exposer {
      */
     private long end;
 
+    /**
+     * 秒杀进行中
+     * @param exposed
+     * @param md5
+     * @param id
+     */
     public Exposer(boolean exposed, String md5, long id) {
         this.exposed = exposed;
         this.md5 = md5;
         this.id = id;
     }
 
+    /**
+     * 秒杀未开始
+     * @param exposed
+     * @param id
+     * @param now
+     * @param start
+     * @param end
+     */
     public Exposer(boolean exposed, long id, long now, long start, long end) {
         this.exposed = exposed;
         this.id = id;
@@ -50,6 +64,11 @@ public class Exposer {
         this.end = end;
     }
 
+    /**
+     * 秒杀结束
+     * @param exposed
+     * @param id
+     */
     public Exposer(boolean exposed, long id) {
         this.exposed = exposed;
         this.id = id;

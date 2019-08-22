@@ -1,10 +1,11 @@
-package com.nju.edu.seckill.bean;
+package com.nju.edu.seckill.common;
 
+import com.nju.edu.seckill.bean.Order;
 import com.nju.edu.seckill.enums.SeckillStatEnum;
 
 /**
  * SeckillExecution
- *
+ * 秒杀执行结果类型
  * @blame gao xiang
  */
 public class SeckillExecution {
@@ -27,9 +28,9 @@ public class SeckillExecution {
         this.order = order;
     }
 
-    public SeckillExecution(Long id, int state, String stateInfo) {
+    public SeckillExecution(Long id, SeckillStatEnum seckillStatEnum) {
         this.id = id;
-        this.state = state;
-        this.stateInfo = stateInfo;
+        this.state = seckillStatEnum.getState();
+        this.stateInfo = seckillStatEnum.getStateInfo();
     }
 }

@@ -1,8 +1,8 @@
 package com.nju.edu.seckill.service;
 
-import com.nju.edu.seckill.bean.Exposer;
+import com.nju.edu.seckill.common.Exposer;
 import com.nju.edu.seckill.bean.Product;
-import com.nju.edu.seckill.bean.SeckillExecution;
+import com.nju.edu.seckill.common.SeckillExecution;
 import com.nju.edu.seckill.exception.RepeatKillException;
 import com.nju.edu.seckill.exception.SeckillCloseException;
 import com.nju.edu.seckill.exception.SeckillException;

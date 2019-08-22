@@ -14,8 +14,14 @@ import java.util.Date;
  */
 public class Order implements Serializable {
 
-    private long id;//秒杀商品id
-    private BigDecimal money;//付款
+    /**
+     * 秒杀商品id
+     */
+    private long id;
+    /**
+     * 付款
+     */
+    private BigDecimal money;
     private  long userPhone;//用户手机号
 
 
