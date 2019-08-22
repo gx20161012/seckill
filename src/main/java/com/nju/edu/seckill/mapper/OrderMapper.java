@@ -3,6 +3,7 @@ package com.nju.edu.seckill.mapper;
 import com.nju.edu.seckill.bean.Order;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
@@ -11,6 +12,7 @@ import java.math.BigDecimal;
  *
  * @blame gao xiang
  */
+@Component
 @Mapper
 public interface OrderMapper {
 
