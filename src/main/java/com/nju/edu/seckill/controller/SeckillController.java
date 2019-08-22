@@ -28,7 +28,6 @@ public class SeckillController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @ResponseBody
     @RequestMapping("/list")
     public String findAll(Model model){
         List<Product> list = seckillService.findAll();
@@ -94,9 +93,9 @@ public class SeckillController {
     }
 
     @ResponseBody
-    @GetMapping(value = "/time/now")
+    @RequestMapping(value = "/time/now")
     public SeckillResult<Long> time() {
         Date now = new Date();
-        return new SeckillResult(true, now.getTime());
+        return new SeckillResult<>(true, now.getTime());
     }
 }

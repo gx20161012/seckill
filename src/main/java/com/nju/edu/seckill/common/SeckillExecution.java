@@ -21,6 +21,48 @@ public class SeckillExecution {
     //秒杀成功的订单对象
     private Order order;
 
+    @Override
+    public String toString() {
+        return "SeckillExecution{" +
+                "id=" + id +
+                ", state=" + state +
+                ", stateInfo='" + stateInfo + '\'' +
+                ", order=" + order +
+                '}';
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+
+    public String getStateInfo() {
+        return stateInfo;
+    }
+
+    public void setStateInfo(String stateInfo) {
+        this.stateInfo = stateInfo;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
     public SeckillExecution(Long id, SeckillStatEnum seckillStatEnum, Order order) {
         this.id = id;
         this.state = seckillStatEnum.getState();

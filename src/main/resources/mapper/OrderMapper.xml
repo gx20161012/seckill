@@ -6,7 +6,7 @@
 
     <!-- 插入订单明细。如果主键冲突会直接报错，可使用`ignore`实现主键冲突就直接返回0，表示更新失败 -->
     <insert id="insertOrder">
-        INSERT ignore INTO order (id, money, user_phone)
+        INSERT ignore INTO order1 (id, money, user_phone)
         VALUES (#{id}, #{money}, #{userPhone})
     </insert>
 
@@ -19,7 +19,7 @@
           so.user_phone,
           so.money,
           so.create_time,
-          so.state,
+          so.status,
           s.id "product.id",
           s.title "product.title",
           s.cost_price "product.cost_price",
@@ -27,7 +27,7 @@
           s.start_time "product.start_time",
           s.end_time "product.end_time",
           s.stock_count "product.stock_count"
-        FROM order so
+        FROM order1 so
         INNER JOIN product s ON so.id = s.id
         WHERE so.id = #{id} AND so.user_phone = #{userPhone}
     </select>

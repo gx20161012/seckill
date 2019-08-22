@@ -15,7 +15,7 @@
     <update id="reduceStock">
         UPDATE product
         SET stock_count = stock_count - 1
-        WHERE seckill_id = #{id}
+        WHERE id = #{id}
         AND start_time &lt;= #{killTime}
         AND end_time &gt;= #{killTime}
         AND stock_count &gt; 0
